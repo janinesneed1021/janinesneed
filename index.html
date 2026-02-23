@@ -753,182 +753,70 @@
     }
 
     .reading-header {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      margin-bottom: 3rem;
-      flex-wrap: wrap;
-      gap: 1.5rem;
+      margin-bottom: 2.5rem;
     }
 
-    .reading-controls {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 1rem;
-    }
-
-    .search-box {
-      position: relative;
-    }
-
-    .search-box input {
-      padding: 0.65rem 1rem 0.65rem 2.5rem;
-      border: 1.5px solid var(--border);
-      background: var(--warm-white);
-      font-family: var(--sans);
-      font-size: 0.85rem;
-      color: var(--text);
-      outline: none;
-      width: 260px;
-      transition: border-color 0.2s;
-    }
-
-    .search-box input:focus { border-color: var(--gold); }
-    .search-box input::placeholder { color: var(--text-muted); }
-
-    .search-box svg {
-      position: absolute;
-      left: 0.75rem;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--text-muted);
-    }
-
-    .cat-filters {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-
-    .cat-btn {
-      padding: 0.3rem 0.8rem;
-      border: 1.5px solid var(--border);
-      background: transparent;
-      font-family: var(--sans);
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      cursor: pointer;
-      transition: all 0.18s;
-      white-space: nowrap;
-    }
-
-    .cat-btn:hover, .cat-btn.active {
-      background: var(--charcoal);
-      color: var(--warm-white);
-      border-color: var(--charcoal);
-    }
-
-    .articles-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2px;
-      background: var(--border);
-    }
-
-    .article-section {
-      background: var(--warm-white);
-      padding: 2.5rem;
-    }
-
-    .article-section-header {
+    .reading-cta {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 1.5rem;
-      padding-bottom: 0.75rem;
-      border-bottom: 2px solid var(--cream);
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding: 2.25rem 2.75rem;
+      background: var(--warm-white);
+      border: 1px solid var(--border-gold);
     }
 
-    .article-section-title {
-      font-family: var(--serif);
-      font-size: 1.05rem;
-      font-weight: 700;
+    .reading-cta-stats {
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      letter-spacing: 0.04em;
+      flex-wrap: wrap;
+    }
+
+    .reading-cta-stats strong {
+      color: var(--slate-dark);
+      font-weight: 600;
+    }
+
+    .cta-divider {
+      color: var(--gold);
+      opacity: 0.6;
+    }
+
+    .reading-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.9rem 1.85rem;
+      background: var(--charcoal);
+      color: var(--warm-white);
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 2px solid var(--charcoal);
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+
+    .reading-cta-btn:hover {
+      background: transparent;
       color: var(--charcoal);
     }
 
-    .article-count-badge {
-      font-family: var(--mono);
-      font-size: 0.68rem;
-      color: var(--gold);
-      font-weight: 500;
+    .reading-cta-btn svg {
+      transition: transform 0.2s;
     }
 
-    .article-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .article-item {
-      display: flex;
-      align-items: baseline;
-      gap: 0.75rem;
-      padding: 0.6rem 0;
-      border-bottom: 1px solid var(--border);
-      transition: background 0.15s;
-      margin: 0 -0.5rem;
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-    }
-
-    .article-item:last-child { border-bottom: none; }
-    .article-item:hover { background: var(--gold-pale2); }
-
-    .article-dot {
-      width: 4px; height: 4px;
-      border-radius: 50%;
-      background: var(--gold);
-      flex-shrink: 0;
-      margin-top: 0.55rem;
-      opacity: 0.7;
-    }
-
-    .article-link {
-      font-size: 0.84rem;
-      color: var(--text);
-      text-decoration: none;
-      line-height: 1.45;
-      flex: 1;
-      transition: color 0.15s;
-    }
-
-    .article-link:hover { color: var(--gold); }
-
-    .article-src {
-      font-size: 0.67rem;
-      color: var(--text-muted);
-      flex-shrink: 0;
-      font-style: italic;
-      font-family: var(--mono);
-    }
-
-    #no-results {
-      display: none;
-      text-align: center;
-      padding: 5rem;
-      color: var(--text-muted);
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: 1.1rem;
-      background: var(--warm-white);
-    }
-
-    .reading-total {
-      margin-top: 2rem;
-      text-align: center;
-      font-family: var(--mono);
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      letter-spacing: 0.1em;
-    }
-
-    .reading-total span {
-      color: var(--gold);
-      font-weight: 500;
+    .reading-cta-btn:hover svg {
+      transform: translateX(3px);
     }
 
     /* ── CONTACT ── */
@@ -1335,26 +1223,27 @@
 <!-- READING LIST -->
 <section id="articles">
   <div class="section-inner">
-    <div class="reading-header">
-      <div>
-        <div class="section-label">Favorite Articles</div>
-        <h2 class="section-title">What I'm <em>Reading.</em></h2>
-        <p style="font-size:0.98rem; color:var(--text-muted); line-height:1.8; max-width:560px; margin-top:0.75rem;">After 20 years in the IT industry, I realize I am still a work in progress. I get better through reading, writing, mentorship, and being with insanely talented people. Below are some articles I've collected from around the web that you may enjoy.</p>
-      </div>
-      <div class="reading-controls">
-        <div class="search-box">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-          <input type="text" id="article-search" placeholder="Search articles…"/>
-        </div>
-        <div class="cat-filters" id="cat-filters">
-          <button class="cat-btn active" data-cat="all">All</button>
-        </div>
-      </div>
+    <div class="reading-header reveal">
+      <div class="section-label">Favorite Articles</div>
+      <h2 class="section-title">What I'm <em>Reading.</em></h2>
+      <p style="font-size:0.98rem; color:var(--text-muted); line-height:1.8; max-width:560px; margin-top:0.75rem;">After 20 years in the IT industry, I realize I am still a work in progress. I get better through reading, writing, mentorship, and being with insanely talented people. Below are some articles I've collected from around the web that you may enjoy.</p>
     </div>
 
-    <div class="articles-grid" id="articles-grid"></div>
-    <div id="no-results">No articles match your search.</div>
-    <p class="reading-total">Curated collection of <span id="total-count">0</span> articles across <span id="cat-count">0</span> categories</p>
+    <div class="reading-cta reveal">
+      <div class="reading-cta-stats">
+        <span><strong>195+</strong> articles</span>
+        <span class="cta-divider">·</span>
+        <span><strong>25</strong> categories</span>
+        <span class="cta-divider">·</span>
+        <span><strong>4 years</strong> of curation</span>
+      </div>
+      <a href="reading-list%2021FEBRUARY2026.html" class="reading-cta-btn">
+        Browse the Full Reading List
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -1421,481 +1310,6 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-// ── READING LIST DATA ──
-const readingData = [
-  {
-    cat: "Relationships & Connecting",
-    articles: [
-      { title: "The Urge to Quit — Simon Sinek", url: "https://youtu.be/VXt9Zt2urIs", source: "YouTube" },
-      { title: "The Best Teammates Do This: Two Powerful Teamwork Examples", url: "https://www.teamworkandleadership.com/2017/02/the-best-teammates-do-this-two-powerful-teamwork-examples.html", source: "Teamwork & Leadership" },
-      { title: "Hold the Rope: Powerful and Inspirational Story for Your Team", url: "https://coachfore.org/2012/07/22/hold-the-rope-powerful-and-inspirational-story-for-your-team/", source: "CoachFore" },
-      { title: "The Power of Healthy Relationships at Work", url: "https://hbr.org/2022/06/the-power-of-healthy-relationships-at-work", source: "HBR" },
-      { title: "The Magic of Work Friends", url: "https://www.nytimes.com/2022/07/14/business/work-friends.amp.html", source: "NYT" },
-      { title: "The Lifelong Power of Close Relationships", url: "https://www.wsj.com/articles/the-lifelong-power-of-close-relationships-11673625450", source: "WSJ" },
-      { title: "Call Anytime — Mike Leach's Impact", url: "https://www.si.com/college/mississippistate/football/mississippi-state-football-head-coach-mike-leach-impacted-several-lives-before-his-passing", source: "SI" },
-      { title: "How We Spend Our Time", url: "https://www.sahilbloom.com/newsletter/how-we-spend-our-time", source: "Sahil Bloom" },
-      { title: "The Medici Effect", url: "https://x.com/sahilbloom/status/1717899007484400036", source: "Twitter/X" },
-      { title: "People in Your Life", url: "https://www.linkedin.com/posts/sharonhulce_extraordinarynotordinary-activity-7147248515398709249-rP74", source: "LinkedIn" },
-      { title: "Train Yourself to Always Show Up", url: "https://www.nytimes.com/2024/01/19/opinion/religion-ancient-text-judaism.html", source: "NYT" },
-      { title: "The Unified Theory of F*cks", url: "https://aworkinglibrary.com/writing/unified-theory-of------", source: "A Working Library" },
-      { title: "8 Minutes — Simon Sinek", url: "https://www.linkedin.com/posts/simonsinek_when-youre-struggling-heres-a-way-you-activity-7192188408771842049-z6bI", source: "LinkedIn" },
-      { title: "Building Trust", url: "https://x.com/shaneaparrish/status/1967959066522816859", source: "Twitter/X" },
-      { title: "Glue Players", url: "https://www.wsj.com/lifestyle/workplace/employees-team-holding-together-8eea5f6d", source: "WSJ" },
-      { title: "Who You Hang Out With", url: "https://x.com/stevemagness/status/1999983926631117128", source: "Twitter/X" },
-      { title: "Americans Need More Parties", url: "https://www.theatlantic.com/family/archive/2025/01/throw-more-parties-loneliness/681203/", source: "The Atlantic" },
-      { title: "Fast Friends Procedure — 36 Questions for Closeness", url: "https://ggia.berkeley.edu/practice/36_questions_for_increasing_closeness", source: "Berkeley" },
-      { title: "Every Role Matters", url: "https://twitter.com/BrianLevenson/status/1666766953849970688", source: "Twitter/X" },
-      { title: "Who You Surround Yourself With", url: "https://x.com/sahilbloom/status/1898362685017784544", source: "Twitter/X" },
-    ]
-  },
-  {
-    cat: "Perseverance",
-    articles: [
-      { title: "Mental Toughness: David Goggins", url: "https://theprofile.substack.com/p/david-goggins", source: "The Profile" },
-      { title: "Cost of Complacency", url: "https://link.medium.com/xRaCqG8uZkb", source: "Medium" },
-
-      { title: "Confidence", url: "https://twitter.com/justinsua/status/1477329493907976195", source: "Twitter/X" },
-      { title: "Love Pushes You Through", url: "https://twitter.com/justinsua/status/1514937757801537544", source: "Twitter/X" },
-      { title: "Circle of Competence — Focus", url: "https://fs.blog/circle-of-competence/", source: "Farnam Street" },
-
-      { title: "Prepare: Doing Your Best", url: "https://fs.blog/doing-your-best/", source: "Farnam Street" },
-      { title: "Don't Stop Believin' — Story Behind the Song", url: "https://www.tennessean.com/story/entertainment/music/story-behind-the-song/2018/03/16/dont-stop-believin-journey-jonathan-cain-story-behind-song/425063002/", source: "Tennessean" },
-      { title: "Nike: Yesterday You Said Tomorrow", url: "https://twitter.com/heykahn/status/1543817260346642432", source: "Twitter/X" },
-      { title: "Long-Term Success", url: "https://twitter.com/justinsua/status/1546453652373635072", source: "Twitter/X" },
-      { title: "Experience vs. Expertise", url: "https://twitter.com/farnamstreet/status/1573294998807789568", source: "Twitter/X" },
-      { title: "Choose the Painful Path", url: "https://twitter.com/navalismhq/status/1589031052277784577", source: "Twitter/X" },
-      { title: "Flow State — Key to Productivity", url: "https://ideas.ted.com/the-key-to-productivity-is-tapping-into-your-flow-state-heres-how/", source: "TED" },
-      { title: "The Last Dance - Most Motivational Moments (Michael Jordan)", url: "https://youtu.be/hgA0hlEQTgs", source: "YouTube" },
-      { title: "Habits", url: "https://twitter.com/sahilbloom/status/1626204733278158852", source: "Twitter/X" },
-      { title: "Pressure", url: "https://twitter.com/attackathletics/status/1646011495208173568", source: "Twitter/X" },
-      { title: "Patience", url: "https://twitter.com/justinsua/status/1652334399868764161", source: "Twitter/X" },
-      { title: "AI and Value Selling", url: "https://www.linkedin.com/posts/davidsfox88_microsofts-wake-up-call-to-sales-harry-activity-7349145256107331586-lCIl", source: "LinkedIn" },
-      { title: "You Have to Want It — Joel Embiid", url: "https://www.theplayerstribune.com/articles/joel-embiid-its-story-time", source: "The Players' Tribune" },
-      { title: "Traits of Elite Professionals", url: "https://www.theprocess.news/p/17-traits-elite-professionals", source: "The Process" },
-      { title: "Productivity — Sam Altman", url: "https://blog.samaltman.com/productivity", source: "Sam Altman" },
-      { title: "The Cost of Being All In — Carli Lloyd", url: "https://www.theplayerstribune.com/articles/carli-lloyd-nike-world-cup-united-states", source: "The Players' Tribune" },
-      { title: "Proof You Can Do Hard Things", url: "https://blog.nateliason.com/p/proof-you-can-do-hard-things", source: "Nat Eliason" },
-      { title: "The Do Something Principle", url: "https://x.com/iammarkmanson/status/1692862255656779869", source: "Twitter/X" },
-      { title: "4 Levels of Players — Robert Saleh", url: "https://youtu.be/gNCa1ILYqTg", source: "YouTube" },
-      { title: "Bias Towards Action", url: "https://chiefs-of-staff.notion.site/Bias-towards-action-730451d4d9324001b0104911911e3581", source: "Notion" },
-      { title: "High vs. Mediocre Performance", url: "https://x.com/gb1121/status/1697935023591047385", source: "Twitter/X" },
-      { title: "Embrace the Struggle", url: "https://x.com/saveyoursons/status/1755976382725619982", source: "Twitter/X" },
-      { title: "The Price of Success", url: "https://awealthofcommonsense.com/2023/10/the-price-of-success/", source: "A Wealth of Common Sense" },
-      { title: "Commitment: Hugging the X-Axis", url: "https://perell.com/essay/hugging-the-x-axis/", source: "David Perell" },
-      { title: "The Dark Side of Compounding", url: "https://www.sahilbloom.com/newsletter/how-to-avoid-the-dark-side-of-compounding", source: "Sahil Bloom" },
-      { title: "You're Only as Good as Your Worst Day", url: "https://fs.blog/worst-day/", source: "Farnam Street" },
-      { title: "Most Things Just Need to Be Done", url: "https://www.dltn.io/posts/most-things-just-need-to-be-done", source: "Blog" },
-      { title: "Old Beliefs Holding You Back", url: "https://www.linkedin.com/posts/sahilbloom_i-recently-came-across-a-story-with-a-powerful-activity-7253736726949457920-6Cvq", source: "LinkedIn" },
-      { title: "Tolerance", url: "https://x.com/sahilbloom/status/1930243396423053587", source: "Twitter/X" },
-      { title: "Enjoy the Day-to-Day Grind", url: "https://x.com/charlesmiller_7/status/1931045798940172673", source: "Twitter/X" },
-      { title: "Feeling Stuck? Ask These 8 Questions", url: "https://www.sahilbloom.com/newsletter/feeling-stuck-ask-these-8-questions", source: "Sahil Bloom" },
-      { title: "The Valley Before the Breakthrough", url: "https://thegrowtheq.com/the-valley-before-the-breakthrough/", source: "The Growth Eq" },
-      { title: "Endurance — Steve Magness", url: "https://x.com/stevemagness/status/1962136079357583776", source: "Twitter/X" },
-      { title: "Make a Comeback", url: "https://x.com/waronweakness/status/1962586549586915749", source: "Twitter/X" },
-      { title: "Best Nike Ads", url: "https://75media.co.uk/blog/best-nike-ads/", source: "75 Media" },
-      { title: "Winning Means You Have to Lose", url: "https://x.com/charlesmiller_7/status/1965472547157287048", source: "Twitter/X" },
-      { title: "Pressure is Privilege", url: "https://x.com/kpaxs/status/1989911806945759662", source: "Twitter/X" },
-      { title: "Grit and Stallone", url: "https://x.com/kpaxs/status/1860720494330171464", source: "Twitter/X" },
-      { title: "Just Get Stuff Done — Obama", url: "https://www.linkedin.com/posts/daniel-abrahams_when-former-us-president-barack-obama-was-activity-7078549210865827840-31Ii", source: "LinkedIn" },
-      { title: "Sometimes We Just Need a Nudge — Stephen King Profile", url: "https://theprofile.substack.com/p/the-profile-dossier-stephen-king", source: "The Profile" },
-    ]
-  },
-  {
-    cat: "Resilience",
-    articles: [
-      { title: "The Power of Belief — Eduardo Briceno (TED)", url: "https://www.ted.com/talks/eduardo_briceno_how_to_get_better_at_the_things_you_care_about", source: "TED" },
-      { title: "How to Stop Languishing and Start Finding Flow — Adam Grant (TED)", url: "https://www.ted.com/talks/adam_grant_how_to_stop_languishing_and_start_finding_flow", source: "TED" },
-      { title: "Burn the Ships", url: "https://twitter.com/justinsua/status/1475427002043752454", source: "Twitter/X" },
-      { title: "Irritated by the Rub", url: "https://twitter.com/justinsua/status/1654467102487486464", source: "Twitter/X" },
-      { title: "Confidence Comes from Doing the Work", url: "https://twitter.com/bpoppenheimer/status/1689003799581536256", source: "Twitter/X" },
-      { title: "Heart, Grit, Will, Strong Mind — Becky Hammon Hall of Fame Speech", url: "https://www.youtube.com/watch?v=Ue0DrW-io-s", source: "YouTube" },
-      { title: "You Have to Love It", url: "https://x.com/bpoppenheimer/status/1692203186738565592", source: "Twitter/X" },
-      { title: "Failure and Being Coached", url: "https://www.linkedin.com/posts/karalawson20_failure-leaves-you-with-two-options-which-activity-7178214987264348161-3qc-", source: "LinkedIn" },
-      { title: "Belief in Someone", url: "https://x.com/laurarbnsn/status/1845990679761027144", source: "Twitter/X" },
-      { title: "Failure", url: "https://youtu.be/JA7G7AV-LT8", source: "YouTube" },
-      { title: "Never Give Less Than Your Best", url: "https://www.linkedin.com/posts/karalawson20_never-give-less-than-your-best-activity-7387584854470844416-89Hk", source: "LinkedIn" },
-    ]
-  },
-  {
-    cat: "Recovery",
-    articles: [
-      { title: "Resilience is About How You Recharge, Not How You Endure", url: "https://hbr.org/2016/06/resilience-is-about-how-you-recharge-not-how-you-endure", source: "HBR" },
-      { title: "Saying No — Ryan Holiday", url: "https://twitter.com/ryanholiday/status/1570795541671587847", source: "Twitter/X" },
-      { title: "Saying No — Greg McKeown", url: "https://twitter.com/gregorymckeown/status/1563515485937082372", source: "Twitter/X" },
-      { title: "Saying No — NYT", url: "https://www.nytimes.com/2024/02/28/well/mind/saying-no.html", source: "NYT" },
-      { title: "One Simple Thing to Reduce Stress: Walk in Nature", url: "https://www.wsj.com/articles/stress-relief-walk-nature-science-11659388504", source: "WSJ" },
-      { title: "Just Walk", url: "https://x.com/morganhousel/status/1968797134397804944", source: "Twitter/X" },
-      { title: "I Study Stress — This Cure Surprised Me", url: "https://www.wsj.com/health/wellness/i-study-stress-this-cure-surprisedand-helpedme-3236b6df", source: "WSJ" },
-      { title: "Why Having Fun is the Secret to a Healthier Life — Catherine Price (TED)", url: "https://www.ted.com/talks/catherine_price_why_having_fun_is_the_secret_to_a_healthier_life", source: "TED" },
-      { title: "The 7 Types of Rest That Every Person Needs", url: "https://ideas.ted.com/the-7-types-of-rest-that-every-person-needs/", source: "TED" },
-      { title: "Penalty Kicks and Stress", url: "https://www.wsj.com/articles/world-cup-penalty-kick-shootout-geir-jordet-11670449695", source: "WSJ" },
-      { title: "The Importance of Slowing Down", url: "https://www.ft.com/content/d7c98cb2-5a0e-44eb-82a5-ce212144c3e1", source: "FT" },
-      { title: "Boss Up by Scaling Back and Slowing Down", url: "https://youtu.be/9Ilh618ovWg", source: "YouTube" },
-    ]
-  },
-  {
-    cat: "Leadership",
-    articles: [
-      { title: "Nick Saban — The Profile", url: "https://theprofile.substack.com/p/the-profile-dossier-nick-saban-americas", source: "The Profile" },
-      { title: "Team Captains as Models for Managers", url: "https://www.resetwork.co/sports-captains-as-models-for-what-managers-should-be-doing-now/", source: "ReSet Work" },
-      { title: "A Good Boss is Better Than a Good Company", url: "https://brigettehyacinth.com/a-good-boss-is-better-than-a-good-company-2/", source: "Blog" },
-      { title: "Teacher vs. Schemer", url: "https://thedailycoach.substack.com/p/are-you-a-schemer-or-a-teacher", source: "The Daily Coach" },
-      { title: "18 Things Leaders Do — Ryan Holiday", url: "https://twitter.com/ryanholiday/status/1420807675735052289", source: "Twitter/X" },
-      { title: "The Locker Room", url: "https://www.collaborativefund.com/blog/the-locker-room/", source: "Collaborative Fund" },
-      { title: "The Secret to Spotting the Leader", url: "https://www.admiredleadership.com/field-notes/the-secret-to-spotting-the-leader/", source: "Admired Leadership" },
-      { title: "Remember Rule Number 6", url: "https://www.admiredleadership.com/field-notes/remember-rule-number-6/", source: "Admired Leadership" },
-      { title: "Performance vs. Trust", url: "https://www.linkedin.com/posts/activity-6864796138881605632-NF2w", source: "LinkedIn" },
-      { title: "Get Caught Doing the Right Thing", url: "https://twitter.com/justinsua/status/1476905311466311680", source: "Twitter/X" },
-      { title: "Above or Below the Line", url: "https://youtu.be/fLqzYDZAqCI", source: "YouTube" },
-      { title: "Control Your Impulses", url: "https://youtu.be/8wpP1W8eoaI", source: "YouTube" },
-      { title: "On Priorities — Adam Grant", url: "https://twitter.com/adammgrant/status/1642180266234990594", source: "Twitter/X" },
-      { title: "Paradoxes of Leadership", url: "https://twitter.com/sahilbloom/status/1522941075375149056", source: "Twitter/X" },
-      { title: "Why People Quit", url: "https://twitter.com/juliastiglitz/status/1550896144212848641", source: "Twitter/X" },
-      { title: "Commitment Through Character — Adam Grant", url: "https://twitter.com/adammgrant/status/1557365126361190401", source: "Twitter/X" },
-      { title: "Better Than You Found It — Naval", url: "https://twitter.com/naval/status/1558162857543405568", source: "Twitter/X" },
-      { title: "Make It Better Than You Found It — Ryan Holiday", url: "https://ryanholiday.net/why-i-pick-up-trash-at-the-beach/", source: "Ryan Holiday" },
-      { title: "Rituals for Engineering Teams", url: "https://charity.wtf/2022/08/15/rituals-for-engineering-teams/", source: "Charity.wtf" },
-      { title: "Paying Attention to Your Attention — Adam Grant", url: "https://twitter.com/adammgrant/status/1561371232506978304", source: "Twitter/X" },
-      { title: "You Don't Need Credit. Do the Right Thing.", url: "https://dailystoic.com/you-dont-need-credit/", source: "Daily Stoic" },
-      { title: "Bet on People", url: "https://twitter.com/camp4/status/1626587069509402624", source: "Twitter/X" },
-      { title: "Thermometer or Thermostat", url: "https://youtu.be/ZsOeLx13Bcg", source: "YouTube" },
-      { title: "Risks: Phony or Expert Confidence", url: "https://fs.blog/winners-edge/", source: "Farnam Street" },
-      { title: "See the Ship Through the Eyes of the Crew", url: "https://fs.blog/michael-abrashoff-leadership/", source: "Farnam Street" },
-      { title: "10 Lessons from Bill Walsh", url: "https://www.theprocess.news/p/10-lessons-silicon-valleys-legendary-coach", source: "The Process" },
-      { title: "Being Misunderstood — Sam Altman", url: "https://blog.samaltman.com/the-strength-of-being-misunderstood", source: "Sam Altman" },
-      { title: "9 Sources of Competitive Advantage", url: "https://x.com/justinsua/status/1693278612332364172", source: "Twitter/X" },
-      { title: "A Few Stories About Big Decisions", url: "https://collabfund.com/blog/a-few-stories-about-big-decisions/", source: "Collaborative Fund" },
-      { title: "Decoding Leadership — McKinsey", url: "https://www.mckinsey.com/featured-insights/leadership/decoding-leadership-what-really-matters", source: "McKinsey" },
-      { title: "Parkinson's Law", url: "https://www.thedaily.coach/p/parkinsons-law", source: "The Daily Coach" },
-      { title: "Nike's Framework", url: "https://x.com/anthonyvicino/status/1710305245723537617", source: "Twitter/X" },
-      { title: "Getting Better at Getting Better", url: "https://www.rkg.blog/getting-better.php", source: "RKG" },
-      { title: "High Standards: The Real Competition is the Water", url: "https://www.rkg.blog/water.php", source: "RKG" },
-      { title: "Amateurs vs. Pros", url: "https://fs.blog/amateurs-professionals/", source: "Farnam Street" },
-      { title: "Owning Your Seat", url: "https://thegrowtheq.com/imposter-syndrome-and-owning-your-seat/", source: "The Growth Eq" },
-      { title: "Charisma: How to Become More Likeable", url: "https://www.readtheprofile.com/p/how-to-become-more-likable-charismatic", source: "The Profile" },
-      { title: "The Confrontation Obligation", url: "https://www.rkg.blog/confrontation.php", source: "RKG" },
-      { title: "The Enemy Within: Cynicism — James Mattis", url: "https://www.theatlantic.com/magazine/archive/2019/12/james-mattis-the-enemy-within/600781/", source: "The Atlantic" },
-      { title: "Master of Disaster: Crisis Management", url: "https://www.readtheprofile.com/p/how-to-become-a-master-of-disaster-crisis-management", source: "The Profile" },
-      { title: "Optimism in Gratefulness", url: "https://admiredleadership.substack.com/p/the-optimism-in-gratefulness", source: "Admired Leadership" },
-      { title: "Grateful For to Grateful In", url: "https://www.thedaily.coach/p/the-gratitude-shift-from-grateful-for-to-grateful-in", source: "The Daily Coach" },
-      { title: "Navigating Difficult Conversations", url: "https://www.youtube.com/watch?v=bvF0ZM8DjuI", source: "YouTube" },
-      { title: "The Triangle of Talent", url: "https://shaan.beehiiv.com/p/one-minute-blog-the-triangle-of-talent", source: "Shaan Puri" },
-      { title: "Quiet Leadership: Why Silent CEOs Keep Winning", url: "https://www.linkedin.com/pulse/quietly-crushing-why-silent-ceos-keep-beating-loud-ones-howard-yu-454sc", source: "LinkedIn" },
-      { title: "Learning from Mistakes", url: "https://substack.com/@theintellectualedge/note/c-144937102", source: "Substack" },
-      { title: "Risking Everything", url: "https://youtu.be/taxldmY8V-Y", source: "YouTube" },
-      { title: "High Agency People Don't Trust and Verify", url: "https://x.com/george__mack/status/1965130829451198518", source: "Twitter/X" },
-      { title: "The Harada Method: How to Achieve Ambitious Goals", url: "https://www.sahilbloom.com/newsletter/the-harada-method-how-to-achieve-ambitious-goals", source: "Sahil Bloom" },
-      { title: "On Allocating Resources", url: "https://x.com/jsnover/status/2018294171623215515", source: "Twitter/X" },
-      { title: "Behaviors: Be the Example", url: "https://youtu.be/femtLyGEWss", source: "YouTube" },
-      { title: "Dartmouth Experiment — Scar", url: "https://www.linkedin.com/posts/sahilbloom_this-dartmouth-experiment-blew-my-mind-activity-7251562501627113472-qNFb", source: "LinkedIn" },
-    ]
-  },
-
-  {
-    cat: "Excellence",
-    articles: [
-      { title: "Chasing a Standard, Not Wins", url: "https://www.thedaily.coach/p/leading", source: "The Daily Coach" },
-      { title: "The Difference Between Good and Great", url: "https://thedailycoach.substack.com/p/the-difference-between-good-and-great", source: "The Daily Coach" },
-      { title: "A Plan to Win in Sales", url: "https://www.robdthomas.com/robdthomas//2013/01/a-plan-to-win-in-sales.html", source: "Blog" },
-      { title: "Rule of Thirds", url: "https://twitter.com/justinsua/status/1549769329067102209", source: "Twitter/X" },
-      { title: "Mind Over Feelings", url: "https://youtu.be/vcAzAkV0330", source: "YouTube" },
-      { title: "The Hedgehog Concept", url: "https://alexbrogan.beehiiv.com/p/the-hedgehog-concept-impactful-relationships-more", source: "Alex Brogan" },
-      { title: "Details — A Story About Steve Jobs", url: "https://www.npr.org/sections/thetwo-way/2011/08/25/139947282/a-shade-of-yellow-steve-jobs-and-attention-to-detail", source: "NPR" },
-      { title: "Compounding Optimism", url: "https://collabfund.com/blog/compounding-optimism/", source: "Collaborative Fund" },
-      { title: "Notes on Taste", url: "https://www.are.na/editorial/notes-on-taste", source: "Are.na" },
-      { title: "Humble Confidence", url: "https://twitter.com/iamcoriarnold/status/1586681879641657344", source: "Twitter/X" },
-    ]
-  },
-  {
-    cat: "Foundation & Process",
-    articles: [
-      { title: "Consistency — Farnam Street", url: "https://fs.blog/brain-food/september-25-2022/", source: "Farnam Street" },
-      { title: "Consistency — Steve Magness", url: "https://x.com/stevemagness/status/1690350185140862978", source: "Twitter/X" },
-      { title: "Master the Foundation", url: "https://twitter.com/karalawson20/status/1434493091751288834", source: "Twitter/X" },
-      { title: "Focus on Process — Admired Leadership", url: "https://www.admiredleadership.com/field-notes/focus-on-process/", source: "Admired Leadership" },
-      { title: "Violent Execution", url: "https://www.theprocess.news/p/entrepreneurship-lessons-the-process", source: "The Process" },
-      { title: "Follow Your Energy", url: "https://www.sahilbloom.com/newsletter/how-to-choose-your-life-pursuits", source: "Sahil Bloom" },
-    ]
-  },
-  {
-    cat: "Finishing",
-    articles: [
-      { title: "Draft is Just the Start", url: "https://twitter.com/karalawson20/status/1469660230380396552", source: "Twitter/X" },
-      { title: "On Finishing — The Mentor", url: "#", source: "Podcast" },
-      { title: "Finishing", url: "https://twitter.com/alexmathers84/status/1509880776074178565", source: "Twitter/X" },
-      { title: "Staying Put", url: "http://www.collaborativefund.com/blog/staying-put/", source: "Collaborative Fund" },
-      { title: "Confidence Without Competence", url: "https://twitter.com/justinsua/status/1553351150375673856", source: "Twitter/X" },
-      { title: "Humble Exits", url: "https://collabfund.com/blog/humble-exits/", source: "Collaborative Fund" },
-      { title: "Don't Give Up", url: "https://x.com/chrischavez/status/1692992158238699671", source: "Twitter/X" },
-      { title: "Starting is Hard but Finishing is Way Harder", url: "https://www.deanyeong.com/article/finishing-is-harder", source: "Blog" },
-    ]
-  },
-  {
-    cat: "Paradoxes",
-    articles: [
-      { title: "Hormesis", url: "https://alexbrogan.beehiiv.com/p/robustness-principle-hormesis-birth-lottery-more", source: "Alex Brogan" },
-      { title: "Joy and Intensity Can Coexist", url: "https://x.com/bstulberg/status/2009627906872590390", source: "Twitter/X" },
-    ]
-  },
-  {
-    cat: "Women in Leadership",
-    articles: [
-      { title: "Women Know Exactly What They're Doing When They Use Weak Language", url: "https://www.nytimes.com/2023/07/31/opinion/women-language-work.html", source: "NYT" },
-      { title: "Mentors — AVC", url: "https://avc.com/2021/01/mentors/", source: "AVC" },
-      { title: "Emotional Self-Regulation", url: "https://twitter.com/kieransnyder/status/1568377578595176448", source: "Twitter/X" },
-      { title: "Staying Calm During Conflict", url: "https://twitter.com/navalismhq/status/1587849013566398467", source: "Twitter/X" },
-      { title: "Executive Women: Finding and Owning Their Voice", url: "https://www.nytimes.com/interactive/2014/11/16/business/corner-office-women-executives-owning-their-voice.html", source: "NYT" },
-      { title: "The Flanagan Effect", url: "https://www.nytimes.com/2017/11/11/opinion/sunday/shalane-flanagan-marathon-running.html", source: "NYT" },
-      { title: "Following Your Passion and the Gender Pay Gap", url: "https://www.nytimes.com/2023/05/22/opinion/stem-women-gender-disparity.html", source: "NYT" },
-    ]
-  },
-  {
-    cat: "Growth Mindset",
-    articles: [
-      { title: "The Power of 'Yet' — Carol Dweck (TED)", url: "https://www.ted.com/talks/carol_dweck_the_power_of_believing_that_you_can_improve", source: "TED" },
-      { title: "The Best You Can Be is an Imitation of Who Came Before", url: "https://medium.com/@bobsutton/the-best-you-can-be-is-a-perfect-imitation-of-those-who-came-before-you-e580b49c7ca0", source: "Medium" },
-      { title: "1% Beats 0%", url: "https://twitter.com/TMitrosilis/status/1695057469603541477", source: "Twitter/X" },
-      { title: "3 Pillars of Mindset: Patient, Present, Deliberate", url: "https://www.theprocess.news/p/navy-seals-build-unbreakable-mindset", source: "The Process" },
-      { title: "Curiosity Matrix", url: "https://nesslabs.com/curiosity-matrix", source: "Ness Labs" },
-      { title: "How Curiosity Rewires Your Brain", url: "https://open.substack.com/pub/bigthinkmedia/p/how-curiosity-rewires-your-brain", source: "Big Think" },
-      { title: "The Process of Winning is Great Feedback Loops", url: "https://x.com/charlesmiller_7/status/1930592791555432704", source: "Twitter/X" },
-      { title: "Getting Comfortable with Uncertainty", url: "https://x.com/promptllm/status/1967962897134522755", source: "Twitter/X" },
-    ]
-  },
-  {
-    cat: "Gratitude",
-    articles: [
-      { title: "Enough — Kurt Vonnegut and Joe Heller", url: "https://medium.com/@bobsutton/kurt-vonnegut-joe-heller-and-a-thanksgiving-message-8a31ca397888", source: "Medium" },
-      { title: "Thanks — The Daily Coach", url: "https://www.thedaily.coach/p/thanks-thanksgiving-holiday", source: "The Daily Coach" },
-      { title: "How to Make Gratitude Feel Less Like a Chore", url: "https://time.com/6245117/gratitude-how-to-practice/", source: "Time" },
-    ]
-  },
-
-  {
-    cat: "Communication",
-    articles: [
-      { title: "The Price of Not Communicating — Adam Grant", url: "https://twitter.com/adammgrant/status/1562818994926628864", source: "Twitter/X" },
-      { title: "Speaking Clearly: How to Be More Concise", url: "https://www.indeed.com/career-advice/career-development/how-to-speak-more-concisely", source: "Indeed" },
-      { title: "7 Power Skills of Business Communication", url: "https://www.thedailycreator.news/p/business-communication-writing-skills", source: "The Daily Creator" },
-      { title: "Why Write?", url: "https://fs.blog/why-write/", source: "Farnam Street" },
-      { title: "The Elevator Pitch", url: "https://www.thedailycreator.news/p/elevator-pitch-communication-tips", source: "The Daily Creator" },
-      { title: "How to Write with Style — Vonnegut", url: "https://www.worldbuilders.ai/p/vonnegut-write-with-style", source: "World Builders" },
-      { title: "The Power of Words", url: "https://youtu.be/O6NZSAJRVlc", source: "YouTube" },
-      { title: "Writing to Think", url: "https://fs.blog/writing-to-think/", source: "Farnam Street" },
-      { title: "Readers, Writers, and Leaders", url: "https://everythingchanges.us/blog/writers-and-talkers-and-leaders/", source: "Everything Changes" },
-      { title: "Put It Into Words — Paul Graham", url: "https://paulgraham.com/words.html", source: "Paul Graham" },
-      { title: "Brevity", url: "https://www.theprocess.news/p/writing-journaling-personal-growth-the-process", source: "The Process" },
-      { title: "The Secrets of Public Speaking", url: "https://www.economist.com/business/2025/05/19/the-secrets-of-public-speaking", source: "The Economist" },
-      { title: "The Public Speaking Guide", url: "https://www.sahilbloom.com/newsletter/the-public-speaking-guide", source: "Sahil Bloom" },
-      { title: "Discipline of Silence", url: "https://x.com/jaynitx/status/2007367245731950804", source: "Twitter/X" },
-    ]
-  },
-  {
-    cat: "Speed",
-    articles: [
-      { title: "Speed Matters", url: "https://alexbrogan.beehiiv.com/p/speed-matters", source: "Alex Brogan" },
-      { title: "Speed as a Habit", url: "https://firstround.com/review/speed-as-a-habit/", source: "First Round Review" },
-      { title: "Examples of People Quickly Accomplishing Things Together — Patrick Collison", url: "https://patrickcollison.com/fast", source: "Patrick Collison" },
-      { title: "Speed as a Competitive Advantage", url: "https://www.linkedin.com/posts/harrystebbings_founder-funding-business-activity-7347956533722247168-DavS", source: "LinkedIn" },
-    ]
-  },
-  {
-    cat: "Feedback",
-    articles: [
-      { title: "Giving Feedback: How to Criticize Coworkers", url: "https://alexturek.com/2022-03-18-How-to-criticize-coworkers/", source: "Blog" },
-      { title: "Feed Forward — WSJ", url: "https://www.wsj.com/lifestyle/careers/companies-worker-management-feedback-feedforward-hr-9758d6a7", source: "WSJ" },
-      { title: "7 Powerful Coaching Questions", url: "https://www.theprocess.news/p/7-powerful-coaching-questions-the-process", source: "The Process" },
-      { title: "Saying Nothing Usually Makes Things Worse", url: "https://admiredleadership.substack.com/p/saying-nothing-usually-makes-things", source: "Admired Leadership" },
-    ]
-  },
-  {
-    cat: "Critical Thinking",
-    articles: [
-      { title: "Planck vs. Chauffeur Knowledge", url: "https://fs.blog/two-types-of-knowledge/", source: "Farnam Street" },
-      { title: "Excellence Requires Intimacy — Flow State", url: "https://thegrowtheq.com/excellence-requires-intimacy/", source: "The Growth Eq" },
-    ]
-  },
-  {
-    cat: "Alignment",
-    articles: [
-      { title: "Lead with Alignment", url: "https://www.forbes.com/sites/theyec/2022/06/07/what-it-means-to-lead-with-alignment/", source: "Forbes" },
-      { title: "A Simple Flow for Organizational Alignment", url: "https://www.forbes.com/sites/jeffboss/2018/01/21/a-simple-flow-to-think-about-organizational-alignment/", source: "Forbes" },
-      { title: "Fostering Alignment", url: "https://executiveleader.com/how-aligned-is-your-leadership-team/", source: "Executive Leader" },
-    ]
-  },
-  {
-    cat: "Negotiation",
-    articles: [
-      { title: "Negotiation Techniques", url: "https://www.readtheprofile.com/p/negotiation-techniques", source: "The Profile" },
-      { title: "Ten Tips for Negotiating in 2026", url: "https://www.brodow.com/ten-tips-for-negotiating", source: "Brodow" },
-      { title: "Negotiating Well", url: "https://x.com/kpaxs/status/1967806785294844179", source: "Twitter/X" },
-      { title: "Getting Someone to Agree With You", url: "https://time.com/6224300/how-to-change-someones-mind/", source: "Time" },
-    ]
-  },
-  {
-    cat: "Creativity",
-    articles: [
-      { title: "The Creativity Faucet", url: "https://www.julian.com/blog/creativity-faucet", source: "Julian Shapiro" },
-      { title: "Creativity and Risks", url: "https://x.com/businessbarista/status/1747746486681477535", source: "Twitter/X" },
-    ]
-  },
-  {
-    cat: "Risk",
-    articles: [
-      { title: "Whose Risk? Whose Benefit?", url: "https://everythingchanges.us/blog/whose-risks-whose-benefits/", source: "Everything Changes" },
-      { title: "Risk is the Probability of Harm, Not the Storm", url: "https://everythingchanges.us/blog/look-to-the-ground/", source: "Everything Changes" },
-      { title: "Fred Smith, CEO FedEx: Risk and Reward", url: "https://x.com/shaneaparrish/status/1965749103523950968", source: "Twitter/X" },
-    ]
-  },
-  {
-    cat: "Career Development",
-    articles: [
-      { title: "High Agency Learner", url: "https://x.com/george__mack/status/1897723871148884178", source: "Twitter/X" },
-      { title: "Mastery", url: "https://x.com/charlesmiller_7/status/1897675941611982935", source: "Twitter/X" },
-      { title: "Career Advice for 2025 Graduates", url: "https://www.wsj.com/opinion/career-advice-for-2025-graduates-c79b5126", source: "WSJ" },
-      { title: "Steve Jobs Graduation Speech", url: "https://x.com/supersaiyanskai/status/1925453593156403485", source: "Twitter/X" },
-      { title: "12 Shots in Life", url: "https://x.com/13yearoldvc/status/1950276106323664949", source: "Twitter/X" },
-    ]
-  },
-  {
-    cat: "Self-Development",
-    articles: [
-      { title: "Logic vs. Intuition", url: "https://open.substack.com/pub/wildbarestepf/p/intuition-vs-logic-navigating-the", source: "Substack" },
-      { title: "Taste is the New Intelligence", url: "https://open.substack.com/pub/wildbarestepf/p/taste-is-the-new-intelligence", source: "Substack" },
-      { title: "Imposter Syndrome is the Price of Growth", url: "https://open.substack.com/pub/wildbarestepf/p/imposter-syndrome-is-the-price-of", source: "Substack" },
-      { title: "The Most Days Theory", url: "https://open.substack.com/pub/thehyphen/p/the-most-days-theory", source: "Substack" },
-      { title: "Discomfort is the Price You Pay for Growth", url: "https://open.substack.com/pub/shoesandshots/p/discomfort-is-the-price-you-pay-for", source: "Substack" },
-    ]
-  },
-  {
-    cat: "Customer Service",
-    articles: [
-      { title: "How to Build a Customer-First Culture", url: "https://medium.com/@yaminirangan_/how-to-build-a-customer-first-culture-1471dd7f46bd", source: "Medium" },
-      { title: "Why a Strong Product-CS Relationship Matters", url: "https://medium.com/the-startups-guide-to-customer-success/why-a-strong-product-cs-relationship-matters-4757b00759a1", source: "Medium" },
-      { title: "The Doorman's Fallacy", url: "https://www.sahilbloom.com/newsletter/the-doorman-fallacy", source: "Sahil Bloom" },
-      { title: "Unreasonable Hospitality — Grab a Napkin", url: "https://www.unreasonablehospitality.com/newsletter", source: "Unreasonable Hospitality" },
-      { title: "Your Energy Makes a Difference", url: "https://www.unreasonablehospitality.com/newsletter", source: "Unreasonable Hospitality" },
-    ]
-  },
-  {
-    cat: "Goal Setting & New Year",
-    articles: [
-      { title: "Direction Not Speed — 2024", url: "https://www.linkedin.com/posts/sahilbloom_goal-for-2024-focus-on-direction-not-speed-activity-7147208745490513920-Xv3H", source: "LinkedIn" },
-      { title: "Stay Urgent", url: "https://www.linkedin.com/posts/karalawson20_happy-new-year-stay-urgent-activity-7147596970222616576-fH3b", source: "LinkedIn" },
-    ]
-  },
-  {
-    cat: "SaaS & Future of Services",
-    articles: [
-      { title: "Software and Services Blurring", url: "https://www.horsesforsources.com/sofware-services-blurring_111024/", source: "Horses for Sources" },
-      { title: "The Future of Services is No Services", url: "https://www.horsesforsources.com/2030-services-technology-vision_091324/", source: "Horses for Sources" },
-      { title: "GCCs: From Cost to Value", url: "https://www.horsesforsources.com/gcc-cost-to-value_081424/", source: "Horses for Sources" },
-      { title: "Transforming Cost Optimizers into Innovation Powerhouses", url: "https://www.hfsresearch.com/research/transforming-cost-optimizers-innovation-powerhouses/", source: "HFS Research" },
-    ]
-  },
-];
-
-// ── BUILD READING LIST ──
-function buildReadingList() {
-  const grid = document.getElementById('articles-grid');
-  const filtersEl = document.getElementById('cat-filters');
-  let total = 0;
-
-  readingData.forEach(sec => {
-    total += sec.articles.length;
-
-    // Filter button
-    const btn = document.createElement('button');
-    btn.className = 'cat-btn';
-    btn.dataset.cat = sec.cat;
-    btn.textContent = sec.cat;
-    filtersEl.appendChild(btn);
-
-    // Section card
-    const card = document.createElement('div');
-    card.className = 'article-section';
-    card.dataset.cat = sec.cat;
-
-    const header = document.createElement('div');
-    header.className = 'article-section-header';
-    header.innerHTML = `<h3 class="article-section-title">${sec.cat}</h3><span class="article-count-badge">${sec.articles.length}</span>`;
-    card.appendChild(header);
-
-    const list = document.createElement('div');
-    list.className = 'article-list';
-
-    sec.articles.forEach(a => {
-      const item = document.createElement('div');
-      item.className = 'article-item';
-      item.dataset.title = a.title.toLowerCase();
-      const isLink = a.url && a.url !== '#';
-      item.innerHTML = `
-        <div class="article-dot"></div>
-        ${isLink
-          ? `<a class="article-link" href="${a.url}" target="_blank" rel="noopener">${a.title}</a>`
-          : `<span class="article-link" style="cursor:default">${a.title}</span>`
-        }
-        <span class="article-src">${a.source}</span>
-      `;
-      list.appendChild(item);
-    });
-
-    card.appendChild(list);
-    grid.appendChild(card);
-  });
-
-  document.getElementById('total-count').textContent = total;
-  document.getElementById('cat-count').textContent = readingData.length;
-}
-
-// ── FILTERS ──
-let activeCat = 'all', searchTerm = '';
-
-function applyFilters() {
-  const sections = document.querySelectorAll('.article-section');
-  let anyVisible = false;
-
-  sections.forEach(sec => {
-    const catMatch = activeCat === 'all' || sec.dataset.cat === activeCat;
-    if (!catMatch) { sec.style.display = 'none'; return; }
-
-    const items = sec.querySelectorAll('.article-item');
-    let secVisible = false;
-
-    items.forEach(item => {
-      const match = !searchTerm || item.dataset.title.includes(searchTerm);
-      item.style.display = match ? '' : 'none';
-      if (match) secVisible = true;
-    });
-
-    sec.style.display = secVisible ? '' : 'none';
-    if (secVisible) anyVisible = true;
-  });
-
-  document.getElementById('no-results').style.display = anyVisible ? 'none' : 'block';
-}
-
-document.getElementById('cat-filters').addEventListener('click', e => {
-  if (!e.target.classList.contains('cat-btn')) return;
-  document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-  e.target.classList.add('active');
-  activeCat = e.target.dataset.cat;
-  applyFilters();
-  document.querySelector('#articles').scrollIntoView({ behavior: 'smooth' });
-});
-
-document.getElementById('article-search').addEventListener('input', e => {
-  searchTerm = e.target.value.toLowerCase().trim();
-  if (searchTerm) {
-    activeCat = 'all';
-    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-    document.querySelector('.cat-btn[data-cat="all"]').classList.add('active');
-  }
-  applyFilters();
-});
-
-buildReadingList();
 </script>
 </body>
 </html>
